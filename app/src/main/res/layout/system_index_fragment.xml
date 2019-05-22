@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/system_index_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#8a8a8a"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/system_index_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/system_index_title_tv"
+            android:textColor="#FFF"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/system_index_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/system_index_title">
+
+        <com.baidu.mapapi.map.TextureMapView
+            android:id="@+id/system_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/system_park_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:hint="@string/system_park_name"
+            android:imeOptions="actionNext"
+            android:textColor="#000"
+            android:textColorHint="#ccc6c6" />
+
+        <EditText
+            android:id="@+id/system_park_contact"
+            android:layout_below="@id/system_park_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:hint="@string/system_park_contact"
+            android:imeOptions="actionNext"
+            android:textColor="#000"
+            android:textColorHint="#ccc6c6" />
+
+        <EditText
+            android:id="@+id/system_park_contact_phone"
+            android:layout_below="@id/system_park_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:hint="@string/system_park_contact_phone"
+            android:imeOptions="actionNone"
+            android:inputType="phone"
+            android:textColor="#000"
+            android:textColorHint="#ccc6c6" />
+
+        <RelativeLayout
+            android:id="@+id/system_index_toggle_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:gravity="bottom">
+
+            <ImageButton
+                android:id="@+id/system_index_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toggle_on" />
+
+            <TextView
+                android:id="@+id/system_index_toggle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/system_index_toggle"
+                android:text="已开启" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/system_index_line_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/system_index_toggle_all"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/system_index_clear_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_bg_blue"
+                android:text="@string/system_index_clear_all" />
+
+            <Button
+                android:id="@+id/system_index_clear_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_bg_blue"
+                android:text="@string/system_index_clear_last" />
+
+            <Button
+                android:id="@+id/system_index_enclosed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corners_bg_blue"
+                android:text="@string/system_index_enclosed" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/system_index_add_park"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/corners_bg_blue"
+            android:text="@string/system_index_add_park"
+            android:textColor="#000" />
+    </RelativeLayout>
+
+</RelativeLayout>

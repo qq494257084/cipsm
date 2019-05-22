@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/park_ft"
+        android:name="com.tiens.cipsm.fragment.MineFragment_"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/park_menu" />
+    <LinearLayout
+        android:id="@+id/park_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/system_index"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/index_on"
+            android:text="@string/system_index"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/park_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/park_point_on"
+            android:text="@string/park_point"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/park_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/park_info_on"
+            android:text="@string/park_info"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/system_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/mine_on"
+            android:text="@string/system_mine"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="22sp" />
+    </LinearLayout>
+</RelativeLayout>
